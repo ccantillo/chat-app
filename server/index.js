@@ -20,7 +20,7 @@ const __dirname = path.dirname(__filename)
 
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:8080',
+    origin: 'https://vue-node-chat-app.netlify.app/',
   },
 })
 
