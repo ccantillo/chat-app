@@ -122,7 +122,6 @@ io.on('connection', (socket) => {
             console.log("the result is", result)
             messages = result
             io.emit('refreshChat', result)
-            let asd = { id: socket.id, username: socket.username, room:roomId}
             users = users.map(user =>{
                 if (user.username == socket.username){
                     user.room = roomId
