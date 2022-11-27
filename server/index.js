@@ -20,7 +20,7 @@ const __dirname = path.dirname(__filename)
 
 const io = new Server(server, {
   cors: {
-    origin: 'http://192.168.1.86:8080',
+    origin: '*',
   },
 })
 
