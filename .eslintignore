@@ -1,0 +1,10 @@
+node_modules/*
+/dist/**
+/src
+ChatBox.vue
+createRoom.vue
+LoginBox.vue
+UserList.vue
+App.vue
+AppHeaderDropdownAccnt.vue
+.eslintrc.js
