@@ -154,6 +154,9 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.join(__dirname, './public/', 'index.html'))
     })
 }
+app.get('/',(req, res)=>{
+    res.send("hello world")
+})
 server.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`)
 })
