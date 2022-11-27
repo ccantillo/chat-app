@@ -62,7 +62,7 @@ io.on('connection', (socket) => {
     //listen on Change Username
     socket.on('enterUsername', (user) => {
         socket.username = user.username
-        users.push({ id: socket.id, username: socket.username })
+        users.push({ id: socket.id, username: socket.username, room:roomId})
         updateUsernames()
         updateRooms()
         io.emit('userConnected', socket.username)
@@ -122,6 +122,14 @@ io.on('connection', (socket) => {
             console.log("the result is", result)
             messages = result
             io.emit('refreshChat', result)
+            let asd = { id: socket.id, username: socket.username, room:roomId}
+            users = users.map(user =>{
+                if (user.username == socket.username){
+                    user.room = roomId
+                }
+                return user
+            })
+            updateUsernames()
         })
     })
     
